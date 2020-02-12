@@ -6,4 +6,7 @@ class Room:
         self.description = description
 
     def __str__(self):
+        return f"Room: {self.name}"
+        
+    def __repr__(self):
         return 'Name: {self.name}, description: {self.description}'
