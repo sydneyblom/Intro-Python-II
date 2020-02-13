@@ -1,5 +1,7 @@
 from room import Room
 from player import Player
+from item import Item
+
 # Declare all the rooms
 
 room = {
@@ -45,8 +47,8 @@ print(f"Great! Welcome {player.name}, enjoy your adventure!")
 
 while True:
     print(f"{player.room}, {player.room.description}")
-    
-    move = input("Enter a direction(n, s, e, w) >> ")
+
+    move = input("Enter a direction(n, s, e, w) -> ")
 
     if len(move) == 1:
         try:
@@ -60,7 +62,7 @@ while True:
                 player.room = player.room.w_to
             elif move == 'q':
                 print("Thanks for playing! Goodbye!")
-                break
+                exit()
         except:
             print("This movement is not allowed.")
 # Write a loop that:
